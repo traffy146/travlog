@@ -1,101 +1,141 @@
+"use client";
 import Image from "next/image";
-
+import DestinationCarousel from "@/components/DestinationCarousel";
+import Subscribe from "@/components/Subscribe";
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+      <Image
+        src="/images/objects/1.png"
+        alt="objects"
+        width={65}
+        height={169.95}
+        className="absolute hidden md:block"
+        style={{ bottom: "-20%", left: "9%" }}
+      />
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen bg-white relative">
+        {/* Hero Section */}
+        <section className="pt-10 md:pt-20 px-4">
+          <div className="mx-auto flex flex-col lg:flex-row items-center justify-center text-center lg:text-left">
+            {/* Image Container */}
+            <div className="w-full lg:w-2/3 pl-0 lg:pl-12 mb-8 lg:mb-0 order-first lg:order-last flex justify-center">
+              <Image
+                src="/images/cover/1.png"
+                alt="Cover"
+                width={772}
+                height={713}
+                className="rounded-lg w-full h-auto"
+              />
+            </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+            {/* Content Container */}
+            <div className="w-full lg:w-1/3 order-last lg:order-first flex flex-col items-center lg:items-start">
+              <div className="flex items-center lg:justify-start  md:justify-center sm:justify-center p-4 mb-6 md:mb-10 w-full">
+                <div className="md:w-50 px-4 md:px-8 py-3 md:py-5 drop-shadow-lg bg-white text-pink rounded-full flex items-center justify-center">
+                  <span className="text-sm md:text-base font-bold mr-2 md:mr-5">
+                    Explore the World!
+                  </span>
+                  <Image
+                    src="/images/cake/1.png"
+                    alt="Travel"
+                    width={24}
+                    height={24}
+                    className="w-4 h-4 md:w-6 md:h-6"
+                  />
+                </div>
+              </div>
+
+              <h1 className="text-6xl font-bold mb-8 md:mb-16">
+                Travel <span className="text-pink">top destination</span> of the
+                world
+              </h1>
+
+              <p className="text-base lg:text-start lg:w-full md:w-1/2 sm:w-1/2  md:text-lg text-gray-600 mb-6 md:mb-8">
+                We always make our customer happy by providing as many choices
+                as possible
+              </p>
+
+              <div className="flex flex-col sm:flex-row lg:gap-3 md:gap-3 w-full sm:justify-center lg:justify-start">
+                <button className="w-full sm:w-auto px-6 md:px-8 py-2 md:py-3 drop-shadow-lg font-bold bg-violet text-white rounded-full">
+                  Get Started
+                </button>
+                <button className="w-full sm:w-auto px-6 md:px-8 py-2 md:py-3 flex justify-center items-center border rounded-full hover:bg-gray-100">
+                  <Image
+                    src="/images/play/1.png"
+                    alt="play"
+                    width={24}
+                    height={24}
+                  />
+                  <span>Watch Demo</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Sponsors Section */}
+        <section className="py-12 px-4">
+          <div className="max-w-6xl mx-auto">
+            {/* Sponsors Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-12 items-center justify-items-center">
+              <Image
+                src="/images/logos/3.png"
+                alt="Sponsor 1"
+                width={120}
+                height={32}
+                className="w-24 md:w-32 lg:w-auto h-auto"
+              />
+              <Image
+                src="/images/logos/2.png"
+                alt="Sponsor 2"
+                width={120}
+                height={32}
+                className="w-24 md:w-32 lg:w-auto h-auto"
+              />
+              <Image
+                src="/images/logos/1.png"
+                alt="Sponsor 3"
+                width={120}
+                height={32}
+                className="w-24 md:w-32 lg:w-auto h-auto"
+              />
+              <Image
+                src="/images/logos/4.png"
+                alt="Sponsor 4"
+                width={120}
+                height={32}
+                className="w-24 md:w-32 lg:w-auto h-auto"
+              />
+              <Image
+                src="/images/logos/5.png"
+                alt="Sponsor 5"
+                width={120}
+                height={32}
+                className="w-24 md:w-32 lg:w-auto h-auto"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Services  */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12">
+              Our Services
+            </h2>
+          </div>
+        </section>
+
+        {/* Destinations Carousel */}
+        <section className="py-16 ">
+          <DestinationCarousel />
+        </section>
+
+        {/* Contact Section */}
+        <section className="py-16 bg-orange mb-8 rounded-3xl ">
+          <Subscribe />
+        </section>
+      </div>
     </div>
   );
 }

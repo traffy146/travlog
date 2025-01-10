@@ -9,13 +9,38 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff89;
+    --foreground: #000;
   }
+}
+@font-face {
+  font-family: 'Circular';
+  src: url('/fonts/circular.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Circular', sans-serif;
+}
+.text-pink{
+  color:#F85E9F
+}
+.bg-pink{
+  background-color:#F85E9F
+}
+.text-violet{
+  color:#5D50C6
+}
+.bg-violet{
+  background-color:#5D50C6
+}
+.text-orange{
+  color:#FF5722
+}
+.bg-orange{
+  background-color:#face4918
 }
