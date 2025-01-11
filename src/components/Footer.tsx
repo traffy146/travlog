@@ -179,17 +179,12 @@ export default function Footer() {
                   </li>
                   <li>
                     <a href="#" className="text-slate-700 hover:text-pink">
-                      Partner with us
+                      FAQ&apos;s
                     </a>
                   </li>
                   <li>
                     <a href="#" className="text-slate-700 hover:text-pink">
-                      FAQ's
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-slate-700 hover:text-pink">
-                      Blog
+                      Let&apos;s go
                     </a>
                   </li>
                 </ul>
