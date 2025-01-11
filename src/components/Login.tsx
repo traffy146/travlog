@@ -1,11 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import {
-  signInWithEmailAndPassword,
-  onAuthStateChanged,
-  User,
-} from "firebase/auth";
+import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase";
 import Link from "next/link";
 import { useRouter } from "next/navigation"; // Import useRouter
@@ -30,10 +26,20 @@ const Login = () => {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      // After successful login, the redirect will be handled by onAuthStateChanged
-    } catch (error) {
-      setError("Failed to log in. Please check your credentials.");
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      if (userCredential.user) {
+        router.push("/");
+      }
+    } catch (err) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("Failed to login. Please check your credentials.");
+      }
     }
   };
 
@@ -82,7 +88,11 @@ const Login = () => {
             Login
           </button>
         </form>
-        {error && <p className="mt-4 text-sm text-red-600">{error}</p>}
+        {error && (
+          <p className="mt-4 text-sm text-red-600" role="alert">
+            {error}
+          </p>
+        )}
         <div>
           <span className="text-black mr-2">Don&apos;t have an account?</span>
           <Link href="/register" className="text-violet hover:underline">
