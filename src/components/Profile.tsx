@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { onAuthStateChanged, User } from "firebase/auth";
 import { auth } from "../firebase";
 import { useRouter } from "next/navigation";
+import Image from "next/image"; // Import Image from next/image
 
 export default function Profile() {
   const [user, setUser] = useState<User | null>(null);
@@ -28,14 +29,20 @@ export default function Profile() {
         <h1 className="text-2xl font-bold mb-6">Profile</h1>
         <div className="space-y-4">
           {user.photoURL && (
-            <img 
-              src={user.photoURL} 
-              alt="Profile" 
-              className="w-24 h-24 rounded-full"
+            <Image
+              src={user.photoURL}
+              alt="Profile"
+              width={96} // Set appropriate width
+              height={96} // Set appropriate height
+              className="rounded-full"
             />
           )}
-          <p><strong>Email:</strong> {user.email}</p>
-          <p><strong>Display Name:</strong> {user.displayName || "Not set"}</p>
+          <p>
+            <strong>Email:</strong> {user.email}
+          </p>
+          <p>
+            <strong>Display Name:</strong> {user.displayName || "Not set"}
+          </p>
         </div>
       </div>
     </div>

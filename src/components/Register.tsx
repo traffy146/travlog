@@ -20,9 +20,14 @@ const Register = () => {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       // Redirect or update UI upon successful registration
-    } catch (error: any) {
-      console.error("Registration error:", error);
-      setError(error.message);
+    } catch (error) {
+      // Specify the type of error
+      if (error instanceof Error) {
+        console.error("Registration error:", error);
+        setError(error.message);
+      } else {
+        setError("An unknown error occurred.");
+      }
     }
   };
 

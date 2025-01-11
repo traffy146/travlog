@@ -13,22 +13,19 @@ import { useRouter } from "next/navigation"; // Import useRouter
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const [user, setUser] = useState<User | null>(null);
+  const [error, setError] = useState(""); // This is used to display error messages
   const router = useRouter(); // Initialize the router
 
   // Redirect if the user is already logged in
   useEffect(() => {
-    // Ensure the router is available after mounting
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        setUser(user);
         router.push("/home"); // Redirect to the homepage if logged in
       }
     });
 
     return () => unsubscribe();
-  });
+  }, [router]); // Add router as a dependency
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -87,7 +84,7 @@ const Login = () => {
         </form>
         {error && <p className="mt-4 text-sm text-red-600">{error}</p>}
         <div>
-          <span className="text-black mr-2">Don't have an account?</span>
+          <span className="text-black mr-2">Don&apos;t have an account?</span>
           <Link href="/register" className="text-violet hover:underline">
             Register here
           </Link>

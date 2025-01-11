@@ -26,6 +26,7 @@ export default function Subscribe() {
     } catch (error) {
       setStatus("error");
       setMessage("Failed to subscribe. Please try again.");
+      console.error("Subscription error:", error); // Log the error for debugging
     }
   };
 
@@ -41,7 +42,7 @@ export default function Subscribe() {
           </h3>
         </div>
 
-        <form onSubmit={handleSubmit} className=" ">
+        <form onSubmit={handleSubmit}>
           <div className="flex gap-4">
             <div className="relative flex-1">
               <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
@@ -71,7 +72,7 @@ export default function Subscribe() {
             <button
               type="submit"
               disabled={status === "loading"}
-              className="px-8  py-3 bg-violet text-white rounded-full hover:bg-violet/90 disabled:opacity-50"
+              className="px-8 py-3 bg-violet text-white rounded-full hover:bg-violet/90 disabled:opacity-50"
             >
               {status === "loading" ? "Subscribing..." : "Subscribe"}
             </button>
