@@ -37,11 +37,18 @@ export default function Profile() {
               className="rounded-full"
             />
           )}
+          <Image
+            src="/images/profile/1.png"
+            alt="Profile"
+            width={250}
+            height={250}
+          />
           <p>
             <strong>Email:</strong> {user.email}
           </p>
           <p>
-            <strong>Display Name:</strong> {user.displayName || "Not set"}
+            <strong>Display Name:</strong>{" "}
+            {user.displayName || "Juan Dela Cruz"}
           </p>
         </div>
       </div>
