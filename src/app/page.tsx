@@ -30,7 +30,7 @@ export default function Home() {
 
             {/* Content Container */}
             <div className="w-full lg:w-1/3 order-last lg:order-first flex flex-col items-center lg:items-start">
-              <div className="flex items-center lg:justify-start  md:justify-center sm:justify-center p-4 mb-6 md:mb-10 w-full">
+              <div className="flex items-center lg:justify-start  md:justify-center sm:justify-center p-4 mb-6 md:mb-10">
                 <div className="md:w-50 px-4 md:px-8 py-3 md:py-5 drop-shadow-lg bg-white text-pink rounded-full flex items-center justify-center">
                   <span className="text-sm md:text-base font-bold mr-2 md:mr-5">
                     Explore the World!
@@ -56,7 +56,7 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row lg:gap-3 md:gap-3 w-full sm:justify-center lg:justify-start">
-                <button className="w-full sm:w-auto px-6 md:px-8 py-2 md:py-3 drop-shadow-lg font-bold bg-violet text-white rounded-full">
+                <button className="w-full  sm:w-auto px-6 md:px-8 py-2 md:py-3 drop-shadow-lg font-bold bg-violet text-white rounded-full">
                   Get Started
                 </button>
                 <button className="w-full sm:w-auto px-6 md:px-8 py-2 md:py-3 flex justify-center items-center border rounded-full hover:bg-gray-100">
