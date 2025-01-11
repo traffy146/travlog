@@ -34,11 +34,11 @@ export default function Subscribe() {
     <div className="bg-violet/5 py-8 md:py-12 lg:py-16">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         <div className="text-center mb-6 md:mb-8">
-          <h2 className="text-lg md:text-xl tracking-[.25em] mb-2 md:mb-3 font-bold text-pink">
-            SUBSCRIBE
+          <h2 className="text-lg w-auto text-xl tracking-[.25em] mb-2 md:mb-3 font-bold text-pink">
+            SUBSCRIBE TO OUR NEWSLETTER
           </h2>
-          <h3 className="text-2xl md:text-3xl lg:text-4xl mb-4">
-            Get notified about new destinations!
+          <h3 className="text-5xl sm:text-5xl lg:text-6xl">
+            Prepare yourself & let's explore the beauty of the world
           </h3>
         </div>
 
