@@ -3,7 +3,6 @@ import Image from "next/image";
 import DestinationCarousel from "@/components/DestinationCarousel";
 import Subscribe from "@/components/Subscribe";
 import Discount from "@/components/Discount";
-import Service from "@/components/KeyFeature";
 import TestimonialsSection from "@/components/Testimonials";
 import Services from "@/components/Service";
 import KeyFeature from "@/components/KeyFeature";
