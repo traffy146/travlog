@@ -2,6 +2,11 @@
 import Image from "next/image";
 import DestinationCarousel from "@/components/DestinationCarousel";
 import Subscribe from "@/components/Subscribe";
+import Discount from "@/components/Discount";
+import Service from "@/components/KeyFeature";
+import TestimonialsSection from "@/components/Testimonials";
+import Services from "@/components/Service";
+import KeyFeature from "@/components/KeyFeature";
 export default function Home() {
   return (
     <div>
@@ -119,17 +124,16 @@ export default function Home() {
 
         {/* Services  */}
         <section className="py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">
-              Our Services
-            </h2>
-          </div>
+          <Services />
         </section>
 
         {/* Destinations Carousel */}
         <section className="py-16 ">
           <DestinationCarousel />
         </section>
+        <Discount />
+        <KeyFeature />
+        <TestimonialsSection />
 
         {/* Contact Section */}
         <section className="py-16 bg-orange mb-8 rounded-3xl ">
